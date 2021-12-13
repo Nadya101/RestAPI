@@ -61,7 +61,6 @@ public class ReqresTest {
         .then()
                 .log().all()
                 .statusCode(200)
-                .assertThat()
                 .body("data.first_name", equalTo("Janet"))
                 .body("data.id", equalTo(2));
     }
