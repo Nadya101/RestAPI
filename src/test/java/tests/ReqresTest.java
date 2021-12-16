@@ -29,8 +29,8 @@ public class ReqresTest {
                 .then()
                 .log().all()
                 .statusCode(201)
-                .body("name", equalTo("morpheus"))
-                .body("job", equalTo("leader"));
+                .body("name", equalTo(user.getName()))
+                .body("job", equalTo(user.getJob()));
 
     }
 
@@ -131,8 +131,8 @@ public class ReqresTest {
         .then()
                 .log().all()
                 .statusCode(200)
-                .body("name", equalTo("morpheus"))
-                .body("job", equalTo("zion resident"));
+                .body("name", equalTo(user.getName()))
+                .body("job", equalTo(user.getJob()));
     }
 
     @Test
@@ -150,8 +150,8 @@ public class ReqresTest {
         .then()
                 .log().all()
                 .statusCode(200)
-                .body("name", equalTo("morpheus"))
-                .body("job", equalTo("zion resident"));
+                .body("name", equalTo(user.getName()))
+                .body("job", equalTo(user.getJob()));
     }
 
 
